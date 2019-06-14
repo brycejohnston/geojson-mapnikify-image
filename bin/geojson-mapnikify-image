@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var generateImage = require('../'),
+    argv = require('minimist')(process.argv.slice(2)),
+    fs = require('fs');
+
+if (!argv._.length) {
+    return console.error('usage: geojson-mapnikify-image file.geojson [--size] [--output]');
+}
+
+var gj = JSON.parse(fs.readFileSync(argv._[0], 'utf8'));
+var gen = generateImage(gj, argv.size, argv.output, function(err, res) {
+  if (err) return console.error(err);
+  console.log(res);
+});
