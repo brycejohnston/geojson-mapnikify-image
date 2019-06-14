@@ -1,7 +1,7 @@
 # geojson-mapnikify-image
 
 Leverages [geojson-mapnikify](https://github.com/mapbox/geojson-mapnikify) and [node-mapnik](https://github.com/mapnik/node-mapnik)
-bindings to take geojson and output an image directly with [mapnik](https://github.com/mapnik/mapnik).
+bindings to take geojson and output a PNG image directly with [mapnik](https://github.com/mapnik/mapnik).
 
 ## install
 
@@ -24,4 +24,8 @@ geojson-mapnikiy assumptions for converting to valid mapnik stylesheet XML:
 ## binary
 
 If you install `-g`, you can use `geojson-mapnikify-image` as a binary that takes
-a single GeoJSON file, image dimensions, and output filepath as arguments and generates a PNG image.
+a single GeoJSON file, image size, output filepath, and filename (without extension) as arguments and generates a PNG image.
+
+```bash
+geojson-mapnikify-image file.geojson --size 200 --path ./ --filename my_map_name
+```

@@ -4,21 +4,24 @@ var fs = require('fs');
 
 module.exports = generateImage;
 
-function generateImage(gj, size, output, callback) {
+function generateImage(gj, size, path, filename, callback) {
   
   mapnikify(gj, false, function(err,xml) {
+    var xml_path = `${path}/${filename}.xml`;
+    var png_path = `${path}/${filename}.png`;
+
     if (err) throw err;
-    fs.writeFile('./other.xml', xml, function(err) {
+    fs.writeFile(xml_path, xml, function(err) {
       if(err) {
           return console.log(err);
       }
-      fs.exists('./other.xml', function(exists) {
+      fs.exists(xml_path, function(exists) {
         if (exists) {
           mapnik.register_default_fonts();
           mapnik.register_default_input_plugins();
 
           var map = new mapnik.Map(size, size);
-          map.load('./other.xml', function(err,map) {
+          map.load(xml_path, function(err,map) {
             if (err) throw err;
             map.zoomAll();
             var im = new mapnik.Image(size, size);
@@ -26,9 +29,14 @@ function generateImage(gj, size, output, callback) {
               if (err) throw err;
               im.encode('png', function(err,buffer) {
                 if (err) throw err;
-                fs.writeFile(output, buffer, function(err) {
+                fs.writeFile(png_path, buffer, function(err) {
                   if (err) throw err;
-                  return callback(null, 'saved map image.');
+                  try {
+                    fs.unlinkSync(xml_path)
+                    return callback(null, 'saved map image.');
+                  } catch(err) {
+                    console.error(err)
+                  }
                 });
               });
             });

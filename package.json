@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "geojson-mapnikify": "./bin/geojson-mapnikify-image"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/beaorn/geojson-mapnikify-image.git"

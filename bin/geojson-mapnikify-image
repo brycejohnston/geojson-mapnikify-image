@@ -5,11 +5,11 @@ var generateImage = require('../'),
     fs = require('fs');
 
 if (!argv._.length) {
-    return console.error('usage: geojson-mapnikify-image file.geojson [--size] [--output]');
+    return console.error('usage: geojson-mapnikify-image file.geojson [--size] [--path] [--filename]');
 }
 
 var gj = JSON.parse(fs.readFileSync(argv._[0], 'utf8'));
-var gen = generateImage(gj, argv.size, argv.output, function(err, res) {
+var gen = generateImage(gj, argv.size, argv.path, argv.filename, function(err, res) {
   if (err) return console.error(err);
   console.log(res);
 });
