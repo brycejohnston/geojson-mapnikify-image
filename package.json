@@ -1,13 +1,13 @@
 {
   "name": "geojson-mapnikify-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "uses geojson-mapnikify and node-mapnik to take geojson and directly output an image",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "geojson-mapnikify": "./bin/geojson-mapnikify-image"
+    "geojson-mapnikify-image": "./bin/geojson-mapnikify-image"
   },
   "repository": {
     "type": "git",
