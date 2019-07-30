@@ -27,5 +27,5 @@ If you install `-g`, you can use `geojson-mapnikify-image` as a binary that take
 a single GeoJSON file, image size, output filepath, and filename (without extension) as arguments and generates a PNG image.
 
 ```bash
-geojson-mapnikify-image file.geojson --size 200 --path ./ --filename my_map_name
+geojson-mapnikify-image file.geojson --size 200 --output ./ --filename my_map_name
 ```

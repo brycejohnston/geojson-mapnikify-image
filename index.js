@@ -4,11 +4,11 @@ var fs = require('fs');
 
 module.exports = generateImage;
 
-function generateImage(gj, size, path, filename, callback) {
+function generateImage(gj, size, output, filename, callback) {
   
   mapnikify(gj, false, function(err,xml) {
-    var xml_path = `${path}/${filename}.xml`;
-    var png_path = `${path}/${filename}.png`;
+    var xml_path = `${filename}.xml`;
+    var png_path = `${output}/${filename}.png`;
 
     if (err) throw err;
     fs.writeFile(xml_path, xml, function(err) {
