@@ -15,7 +15,7 @@ As a binary:
 
 ## Requirements
 
-geojson-mapnikiy assumptions for converting to valid mapnik stylesheet XML:
+geojson-mapnikify assumptions for converting to valid mapnik stylesheet XML:
 
 * GeoJSON is valid, and in EPSG:4326
 * Styles, if any, are expressed in simplestyle-spec
