@@ -1,6 +1,6 @@
 {
   "name": "geojson-mapnikify-image",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "uses geojson-mapnikify and node-mapnik to take geojson and directly output an image",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/beaorn/geojson-mapnikify-image.git"
+    "url": "git://github.com/brycejohnston/geojson-mapnikify-image.git"
   },
   "keywords": [
     "geojson",
@@ -21,11 +21,11 @@
   "author": "Bryce Johnston",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beaorn/geojson-mapnikify-image/issues"
+    "url": "https://github.com/brycejohnston/geojson-mapnikify-image/issues"
   },
-  "homepage": "https://github.com/beaorn/geojson-mapnikify-image#readme",
+  "homepage": "https://github.com/brycejohnston/geojson-mapnikify-image#readme",
   "dependencies": {
-    "@mapbox/geojson-mapnikify": "github:beaorn/geojson-mapnikify",
-    "mapnik": "^4.3.1"
+    "@mapbox/geojson-mapnikify": "github:mapbox/geojson-mapnikify",
+    "mapnik": "4.5.9"
   }
 }

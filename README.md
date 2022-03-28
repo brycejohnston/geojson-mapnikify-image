@@ -19,7 +19,7 @@ geojson-mapnikify assumptions for converting to valid mapnik stylesheet XML:
 
 * GeoJSON is valid, and in EPSG:4326
 * Styles, if any, are expressed in simplestyle-spec
-* Mapnik **3.x** is the rendering engine
+* Mapnik **3.1** is the rendering engine
 
 ## binary
 
