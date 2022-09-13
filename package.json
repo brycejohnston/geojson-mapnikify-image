@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/brycejohnston/geojson-mapnikify-image#readme",
   "dependencies": {
-    "@mapbox/geojson-mapnikify": "github:beaorn/geojson-mapnikify",
-    "mapnik": "^4.3.1"
+    "@mapbox/geojson-mapnikify": "github:mapbox/geojson-mapnikify",
+    "mapnik": "github:mapnik/node-mapnik"
   }
 }
